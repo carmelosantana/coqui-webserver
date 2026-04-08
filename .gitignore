@@ -1,0 +1,5 @@
+/vendor/
+.env
+*.cache
+.phpunit.result.cache
+.phpstan-cache/

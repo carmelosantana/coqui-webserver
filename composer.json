@@ -1,0 +1,58 @@
+{
+    "name": "carmelosantana/coqui-toolkit-webserver",
+    "description": "Web server toolkit for Coqui — serve workspace files over HTTP via PHP's built-in server",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carmelo Santana"
+        }
+    ],
+    "keywords": [
+        "php-agents",
+        "webserver",
+        "http",
+        "static-files",
+        "coqui",
+        "toolkit"
+    ],
+    "require": {
+        "php": "^8.4"
+    },
+    "require-dev": {
+        "carmelosantana/php-agents": "^0.7",
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CarmeloSantana\\CoquiToolkitWebserver\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CarmeloSantana\\CoquiToolkitWebserver\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "analyse": "phpstan analyse"
+    },
+    "extra": {
+        "php-agents": {
+            "toolkits": [
+                "CarmeloSantana\\CoquiToolkitWebserver\\WebServerToolkit"
+            ],
+            "description": "Web server — serve workspace files over HTTP with gzip, rewrites, directory listings, and request logging"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
