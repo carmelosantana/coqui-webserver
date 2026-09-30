@@ -3,3 +3,5 @@
 *.cache
 .phpunit.result.cache
 .phpstan-cache/
+vendor/
+.phpunit.cache/
